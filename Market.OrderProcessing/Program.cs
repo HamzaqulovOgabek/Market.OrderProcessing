@@ -1,4 +1,5 @@
-
+using E_CommerceProjectDemo.DataAccess.Extensions;
+using Market.OrderProcessing.Application.Extensions;
 namespace Market.OrderProcessing
 {
     public class Program
@@ -10,6 +11,8 @@ namespace Market.OrderProcessing
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddApplicationLayer(builder.Configuration);
+            builder.Services.AddDataLayer(builder.Configuration);
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
