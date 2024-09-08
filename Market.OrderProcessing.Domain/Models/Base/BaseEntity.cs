@@ -2,8 +2,8 @@
 
 namespace Market.Warehouse.Domain.Models;
 
-public abstract class BaseEntity<TId> where TId : struct
+public abstract class BaseEntity
 {
     [Key]
-    public TId Id { get; set; }
+    public int Id { get; set; }
 }

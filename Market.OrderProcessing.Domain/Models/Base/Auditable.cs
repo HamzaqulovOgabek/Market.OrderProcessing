@@ -1,6 +1,6 @@
 ﻿namespace Market.Warehouse.Domain.Models;
 
-public abstract class Auditable<TId> : BaseEntity<TId> where TId : struct
+public abstract class Auditable : BaseEntity
 {
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime ModifiedAt { get; set; } = DateTime.Now;
